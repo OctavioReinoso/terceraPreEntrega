@@ -164,7 +164,7 @@ function agregarAlCarrito(e) {
     nuevaFila(nuevoItem);
     // actTablaCarrito();
 }
-
+   
 function nuevaFila(item) {
     const nuevoTr = document.createElement('tr');
     let nuevoTd = document.createElement('td');
