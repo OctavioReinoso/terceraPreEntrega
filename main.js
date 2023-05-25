@@ -15,7 +15,7 @@ productos.push(new Producto("Zapatillas03", "Mid", 13000));
 
 localStorage.setItem('producto', JSON.stringify(productos));
 
-// const formSelector = document.getElementById('selectForm');
+
 const selectorProd = document.getElementById('selectProd');
 const btnAgregar = document.getElementById('agregar');
 const btnComprar = document.getElementById('btn-comprar');
@@ -54,9 +54,8 @@ function escuchadorEventos() {
 
         const nuevoItem = new Prenda(prodSelect, 1);
         localStorage.setItem('carrito', JSON.stringify(carrito));
-
+        
     });
-    
 }
 
 
@@ -127,16 +126,16 @@ function vaciarCarrito() {
     total.innerText = 0;
 }
 
-// function comprarProd(){
-//     const divCompra = document.createElement('div');
-//     let msjDiv = document.createElement('h4');
+function comprarProd(){
+    const divCompra = document.createElement('div');
+    let msjDiv = document.createElement('h4');
 
-//     if (carrito.length > 0) {
-//         msjDiv.textContent = "Compra exitosa";
-//         divCompra.appendChild(msjDiv);
-//         contenedor.appendChild(divCompra);
-//     }else{
-//         btnComprar.preventDefault();
-//     }
-// }
+    if (carrito.length > 0) {
+        msjDiv.textContent = "Compra exitosa";
+        divCompra.appendChild(msjDiv);
+        contenedor.appendChild(divCompra);
+    }
+
+    btnComprar.disabled = true;
+}
 
